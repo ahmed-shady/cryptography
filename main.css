@@ -1,0 +1,181 @@
+/* generic */
+
+body {
+  color: #3F3F3F;
+  font-size: 16px;
+  background: #3F3F3F;
+}
+
+h1 {
+  font-family: 'Questrial', Verdana, sans-serif;
+  text-align: center;
+  font-size: 30px;
+  color: #8C8C8C
+}
+
+hr {
+  color: white;
+  margin-bottom: 40px;
+}
+
+/* Here comes to good stuff : content styling */
+
+#content {
+  position: relative;
+  margin: 50px auto;
+  width: 400px;
+  min-height: 200px;
+  z-index: 100;
+  padding: 30px;
+  border: 1px solid #383838;
+  /* My stipped background */
+  background: #D1D1D1;
+  /* Old browsers */
+  background: -moz-repeating-linear-gradient(-45deg, #EFC1CB, #EFC1CB 30px, #F2F2F2 30px, #F2F2F2 40px, #C2E8F5 40px, #C2E8F5 70px, #F2F2F2 70px, #F2F2F2 80px);
+  /* FF3.6+ */
+  background: -webkit-repeating-linear-gradient(-45deg, #EFC1CB, #EFC1CB 30px, #F2F2F2 30px, #F2F2F2 40px, #C2E8F5 40px, #C2E8F5 70px, #F2F2F2 70px, #F2F2F2 80px);
+  /* FF3.6+ */
+  background: -o-repeating-linear-gradient(-45deg, #EFC1CB, #EFC1CB 30px, #F2F2F2 30px, #F2F2F2 40px, #C2E8F5 40px, #C2E8F5 70px, #F2F2F2 70px, #F2F2F2 80px);
+  /* FF3.6+ */
+  background: repeating-linear-gradient(-45deg, #EFC1CB, #EFC1CB 30px, #F2F2F2 30px, #F2F2F2 40px, #C2E8F5 40px, #C2E8F5 70px, #F2F2F2 70px, #F2F2F2 80px);
+  /* FF3.6+ */
+  /*border-radius*/
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  /*box-shadow*/
+  -webkit-box-shadow: 0px 1px 6px #3F3F3F;
+  -moz-box-shadow: 0px 1px 6px #3F3F3F;
+  box-shadow: 0px 1px 6px #3F3F3F;
+}
+
+/** my "fake" background that will hover the stripes **/
+
+#content:after {
+  background: #F9F9F9;
+  margin: 10px;
+  position: absolute;
+  content: " ";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  border: 1px #E5E5E5 solid;
+  /*border-radius*/
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/*** form styling **/
+
+/** inputs and textarea**/
+
+input:not([type="button"]), textarea, select, option {
+  outline: none;
+  display: block;
+  width: 380px;
+  padding: 4px 8px;
+  border: 1px dashed #DBDBDB;
+  color: #3F3F3F;
+  font-family: 'Droid Sans', Tahoma, Arial, Verdana sans-serif;
+  font-size: 14px;
+  /*border-radius*/
+  border-radius: 2px;
+  /*transition*/
+  -webkit-transition: background 0.2s linear, box-shadow 0.6s linear;
+  -moz-transition: background 0.2s linear, box-shadow 0.6s linear;
+  -o-transition: background 0.2s linear, box-shadow 0.6s linear;
+  transition: background 0.2s linear, box-shadow 0.6s linear;
+}
+
+input:not([type="button"]):active, textarea:active, input:not([type="button"]):focus, textarea:focus, select:active, select:focus {
+  background: #F7F7F7;
+  border: dashed 1px #969696;
+  /*box-shadow*/
+  -webkit-box-shadow: 2px 2px 7px #E8E8E8 inset;
+  -moz-box-shadow: 2px 2px 7px #E8E8E8 inset;
+  box-shadow: 2px 2px 7px #E8E8E8 inset;
+}
+
+/* select color */
+
+select, option {
+  color: #8c8c8c;
+}
+
+/* placeholder */
+
+::-webkit-input-placeholder {
+  color: #BABABA;
+  font-style: italic;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #BABABA;
+  font-style: italic;
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical
+}
+
+/** labels**/
+
+label {
+  color: #7F7E7E;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  transition: color 1s ease;
+}
+
+label:hover {
+  color: #191919;
+}
+
+label:before {
+  color: #C1BFBD;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  transition: color 1s ease;
+}
+
+label:hover:before {
+  color: #969696;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  transition: color 1s ease;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+#indication {
+  color: red;
+  padding-left: 10px;
+}
+
+/** Styling the clear button **/
+
+input[type=button] {
+  margin: 0 40%;
+  cursor: pointer;
+  font-family: 'Alice', serif;
+  color: #767676;
+  font-size: 18px;
+  padding: 10px 4px;
+  border: 1px solid #E0E0E0;
+  background: rgb(247, 247, 247);
+  /*border-radius*/
+  border-radius: 5px;
+  /*box-shadow*/
+  box-shadow: 0px 1px 1px #FFF inset, 0 0 0px 5px #EAEAEA;
+  /*transition*/
+}
+
+input[type=button]:hover {
+  background: #EEE;
+}

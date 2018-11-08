@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <link href='main.css' rel='stylesheet' type='text/css'>
+
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div id="content">
+    <h1>Secret Message</h1>
+    <hr />
+    <form>
+      <p style="margin-bottom:35px">
+        <label for="algorithm" class="icon-cog"> Algorithm</label>
+        <select id='algorithm' value=2>
+          <option value=0>caeser cipher</option>
+          <option value=1>playfair</option>
+          <option value=2>DES</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="key" class="icon-key"> Key</label>
+        <input type="text" name="key" id="key" placeholder="key" />
+        <label id="indication"></label>
+      </p>
+
+
+
+      <p>
+        <label for="message" class="icon-comment">&nbsp;Plain </label>
+        <textarea placeholder="Plaintext goes here " id="plain" spellcheck="false"></textarea>
+      </p>
+
+      <p>
+        <label for="message" class="icon-lock">&nbsp; Cipher </label>
+        <textarea placeholder="Ciphertext goes here " id="cipher" spellcheck="false"></textarea>
+      </p>
+
+
+      <input type="button" value=" Clear" />
+
+    </form>
+  </div>
+
+
+  <script src='caeser.js'></script>
+  <script src='playfair.js'></script>
+  <script src='main.js'></script>
+
+</body>
+
+</html>
