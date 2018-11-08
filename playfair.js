@@ -53,7 +53,7 @@ function editPlain(plain) {
 
   if (plain.length % 2 === 1) plain += 'x';
 
-  plain = plain.replace('/j/g', 'i'); //regular expression 'g means global '
+  plain = plain.replace(/j/g, 'i'); //regular expression 'g means global '
   return plain;
 }
 
