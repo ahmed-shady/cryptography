@@ -1,6 +1,8 @@
 function playfair(plain, key) {
 
+
 }
+
 playfair.prototype.encrypt = function(plain, key) {
   key = constructKeyMatrix(key);
   plain = editPlain(plain);
@@ -8,18 +10,19 @@ playfair.prototype.encrypt = function(plain, key) {
   return result;
 }
 
-
 playfair.prototype.decrypt = function(cipher, key) {
-  // not currently supported
+  //currently not supported
   return cipher;
 }
+
+
 /**
 *constructKey
 *input: Key
 *output: key with full alphabet
 *steps
 1- key = 'ref'
-2- key = 'refabcdefghijklm...'
+2- key = 'refabcdefghiklm...'
 3- key = 'refabcdghi...'
 */
 
@@ -28,7 +31,7 @@ function constructKeyMatrix(key) {
   key += alphabet;
   for (let i = 0; i < key.length; i++) {
     // already exists ?!
-    //secretabcdefghi...
+    //secretabcdefghi..
     if (key.indexOf(key[i]) !== i) {
       key = key.slice(0, i) + key.slice(i + 1); //abcdefghi => abcd + fghi
       i--;
@@ -53,7 +56,7 @@ function editPlain(plain) {
 
   if (plain.length % 2 === 1) plain += 'x';
 
-  plain = plain.replace('/j/g', 'i'); //regular expression 'g means global '
+  plain = plain.replace(/j/g, 'i'); //regular expression 'g means global '
   return plain;
 }
 
@@ -70,6 +73,7 @@ function encryptPlayFair(plaintext, key) {
 
     var i1, i2, j1, j2;
     // index (1d) --> i = index / 5 , j = index % 5 (2d)
+    //5/2 = 2.5 | 0 = 2
     i1 = key.indexOf(plaintext[i]) / 5 | 0; //integer
     j1 = key.indexOf(plaintext[i]) % 5;
 

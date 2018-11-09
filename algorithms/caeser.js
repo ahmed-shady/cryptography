@@ -16,12 +16,12 @@ Caeser.prototype.encrypt = function(plaintext, key) {
 }
 
 Caeser.prototype.decrypt = function(ciphertext, key) {
-  if (!Number(key)) return plaintext;
+  if (!Number(key)) return ciphertext;
   return shift(-1 * key, ciphertext);
 }
 
 
-//key = [0,25]
+//key => into range of [0,25]
 
 function editKey(key) {
   //5.5: 5

@@ -41,7 +41,7 @@ cipher.oninput = plain.oninput = key.oninput = function(event) {
   if (lastChanged === plain)
     cipher.value = algo.encrypt(plain.value, key.value);
   else
-    plain.value = algo.decrypt(cipher.value, plain.value);
+    plain.value = algo.decrypt(cipher.value, key.value);
 
 }
 
